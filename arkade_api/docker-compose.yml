@@ -1,0 +1,22 @@
+networks:
+  arkade:
+    name: arkade
+    driver: bridge
+
+volumes:
+  arkade_api_node_modules:
+    name: arkade_api_node_modules
+    driver: local
+
+services:
+  backend:
+    build: .
+    volumes:
+      - .:/home/arkade_api
+      - arkade_api_node_modules:/home/arkade_api/node_modules
+    restart: always
+    command: yarn dev
+    ports: 
+      - 3005:3005
+    networks:
+      - arkade

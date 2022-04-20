@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./api/index.js",
+  "scripts": {
+    "start": "node ./api/index.js",
+    "dev": "nodemon -L --inspect=0.0.0.0 ./api/index.js",
+    "test": "echo testing Nodejs server",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seedUndo": "npx sequelize-cli db:seed:undo:all",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrateUndo": "npx sequelize-cli db:migrate:undo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "csvwriter": "^1.3.0",
+    "dotenv": "^8.2.0",
+    "export-to-csv": "^0.2.1",
+    "express": "^4.17.1",
+    "package.json": "^2.0.1",
+    "path": "^0.12.7",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0"
+  },
+  "nodemonConfig": {
+    "delay": 3000
+  }
+}
